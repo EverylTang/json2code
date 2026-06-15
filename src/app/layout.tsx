@@ -5,6 +5,7 @@ import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProviderWrapper } from "@/components/ThemeProvider";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,6 +71,14 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3864848447623769"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
         <ThemeProviderWrapper>
           <I18nProvider>
