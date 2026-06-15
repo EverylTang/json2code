@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://codetools.cc"),
   title: "CodeTools - Free Online Developer Tools",
   description: "Free online developer tools: Base64, JSON formatter, hash generator, UUID, QR code, currency converter, password generator, and more. All client-side, no data leaves your browser.",
   keywords: [
